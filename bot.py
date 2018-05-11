@@ -14,6 +14,7 @@ async def on_ready():
 
 @bot.event
 async def on_reaction_add(reaction, user):
+    print(f"Used reaction: {reaction.emoji}")
     if reaction.emoji == "✅":
         x = discord.utils.get(bot.get_guild(417154444531204097).roles, name='Verified Member')
         await user.add_roles(x)
