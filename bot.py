@@ -10,7 +10,7 @@ bot = commands.Bot(command_prefix=">",owner_id=277981712989028353)
 @bot.event
 async def on_ready():
     print("Bot is online, and ready to ROLL!")
-
+    await bot.change_presence(activity=discord.Game(name="verifying people!"))
 
 @bot.event
 async def on_reaction_add(reaction, user):
